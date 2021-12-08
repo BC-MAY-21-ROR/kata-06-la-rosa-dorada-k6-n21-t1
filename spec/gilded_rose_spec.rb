@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-require File.join(File.dirname(__FILE__), 'gilded_rose')
+require 'rspec/autorun'
+require '../app/gilded_rose'
 
 describe GildedRose do
   describe '#update_quality' do

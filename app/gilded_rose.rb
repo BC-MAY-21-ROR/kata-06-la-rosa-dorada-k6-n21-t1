@@ -23,7 +23,7 @@ class GildedRose
           if item.name != 'Backstage passes to a TAFKAL80ETC concert'
             item.quality = item.quality - 1 if item.quality.positive? && (item.name != 'Sulfuras, Hand of Ragnaros')
           else
-            item.quality = item.quality - item.quality
+            item.quality -= item.quality
           end
         elsif item.quality < 50
           item.quality = item.quality + 1
