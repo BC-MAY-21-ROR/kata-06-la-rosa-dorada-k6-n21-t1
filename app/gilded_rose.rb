@@ -27,12 +27,9 @@ class GildedRose
 
   def backstage_passes(item)
     return unless item.name == 'Backstage passes to a TAFKAL80ETC concert'
-
     return unless item.sell_in < 11 && (item.quality < 50)
-
     item.quality = item.quality + 1
     return unless item.sell_in < 6 && (item.quality < 50)
-
     item.quality = item.quality + 1
   end
 
@@ -54,11 +51,8 @@ class GildedRose
 
   def conjured(item)
     return unless item.name == 'Conjured'
-
     item.quality = item.quality - 1
-
     return unless item.sell_in.negative?
-
     item.quality = item.quality - 1
   end
 
